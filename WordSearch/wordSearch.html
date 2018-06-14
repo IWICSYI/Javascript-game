@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Find</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+  <p>Word Find game</p>
+  <div id='puzzle'></div>
+  <div id='words'></div>
+
+
+  <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="src/wordfind.js"></script>
+  <script type="text/javascript" src="src/wordfindgame.js"></script> 
+  <script>
+
+    var words = ['kindness', 'courteous', 'helpful','nuture','polite',"bond"];
+
+    // start a word find game
+    var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+
+
+    // create just a puzzle, without filling in the blanks and print to console
+    var puzzle = wordfind.newPuzzle(
+      words,
+      {height: 18, width:18, fillBlanks: false}
+    );
+    wordfind.print(puzzle);
+
+  </script>
+</body>
+</html>
