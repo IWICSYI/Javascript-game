@@ -18,11 +18,11 @@
 		         {'image' : 'images/placeholder1.png',  'text' : 'Crossword', 'link':'../Crossword/crossWord.html'},
 		         {'image' : 'images/placeholder2.png',   'text' : 'WordSearch','link':'../WordSearch/wordSearch.html'},
 		         {'image' : 'images/placeholder3.png',  'text' : 'MemoryMatch','link':'../MemoryMatch/memoryMatch.html'},
-		         {'image' : 'images/placeholder4.png',  'text' : 'placeholder4','link':'../Crossword/crossWord.html'},
+		         {'image' : 'images/placeholder4.png',  'text' : 'RecycleGame','link':'../RecyleGame/recyleGame.html'},
 		         {'image' : 'images/placeholder5.png', 'text' : 'Crossword','link':'../Crossword/crossWord.html'},
 		         {'image' : 'images/placeholder6.png', 'text' : 'WordSearch','link':'../WordSearch/wordSearch.html'},
 		         {'image' : 'images/placeholder7.png',  'text' : 'MemoryMatch','link':'../MemoryMatch/memoryMatch.html'},
-		         {'image' : 'images/placeholder8.png', 'text' : 'placeholder8','link':'../Crossword/crossWord.html'}
+		         {'image' : 'images/placeholder8.png', 'text' : 'RecyleGame','link':'../RecyleGame/recyleGame.html'}
 		 	 ],
 		 	    'animation' :           // Specify the animation to use.
 		                {
@@ -73,8 +73,8 @@
             {
                 // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
                 alert(indicatedSegment.link + 'triggered');
-                window.location.replace(indicatedSegment.link);
-
+                // window.location.replace(indicatedSegment.link);
+                window.open(indicatedSegment.link);
             }
 
    

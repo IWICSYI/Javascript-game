@@ -1,6 +1,34 @@
 /*
 css style for recycle game
 */
+body
+{
+  background-color: black;
+}
+.items
+{
+
+  position: -webkit-fixed;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+}
+
+
+#itemsArea
+{
+  position:fixed;
+  height:100%;
+  width:100%;
+}
+
+#fullGameArea
+{
+  position:fixed;
+  height:100%;
+  width:100%;
+}
+
 
 
 #recycleBinArea
@@ -11,19 +39,60 @@ css style for recycle game
   grid-column-gap: 50px;
 
   display: -ms-grid;
-   -ms-grid-columns: 1fr 1fr 1fr 1fr;             /* adjusted */
-      grid-template-columns:  repeat( 4, 1fr );
+  -ms-grid-columns: 1fr 1fr 1fr 1fr; 
   -ms-grid-column-gap: 50px;
   
 }
 
-.dropzone
-{
+
+#outer-dropzone {
+  height: 140px;
+}
+
+
+#inner-dropzone {
+  height: 80px;
+}
+
+.dropzone {
+  -ms-grid-column: 1;
   background-color: #ccc;
   border: dashed 4px transparent;
   border-radius: 4px;
   margin: 10px auto 30px;
   padding: 10px;
   width: 80%;
+  height:100px;
   transition: background-color 0.3s;
+}
+
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+
+  color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
 }

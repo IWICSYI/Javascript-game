@@ -121,7 +121,7 @@
 							console.log	(numItems);
 							if(numItems===puzz.data.length)
 							{
-								alert("lol");
+								alert("win");
 							} 
 						}
 
