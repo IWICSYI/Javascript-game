@@ -99,12 +99,16 @@
 							if (e.keyCode === 8 || e.keyCode === 46) 
 							{
 								currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38); 
+
 								//assume backspace and delete will means a row of puzzle is incomplete
 								$('.clues-active').removeClass('clue-done');
 							} 
 							else 
 							{
-								nav.nextPrevNav(e);
+
+					               nav.nextPrevNav(e);
+					          
+
 							}
 							
 							e.preventDefault();
@@ -328,8 +332,13 @@
 					
 					
 					
+					 setTimeout(function()
+								 {
+								 
+					            currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
+					              }, 80) 
+
 					
-					currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
 					
 					
 
@@ -340,9 +349,9 @@
 			
 
 			var nav = {
-				
+									
 				nextPrevNav: function(e, override) {
-
+					
 					var len = $actives.length,
 						struck = override ? override : e.which,
 						el = $(e.target),
